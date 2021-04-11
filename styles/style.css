@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,800;0,900;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif, monospace;
+  overflow: hidden;
+}
+body .main {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/mainWall.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100.5vh;
+}
+body .main .timeDate {
+  font-family: "Poppins", sans-serif, monospace;
+  font-weight: 400;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  color: white;
+}
+body .main .timeDate .time {
+  font-size: 35px;
+}
+body .main .timeDate .date {
+  font-size: 25px;
+}
+body .main #search {
+  border: none;
+  outline: none;
+  height: 40px;
+  width: 270px;
+  position: absolute;
+  top: 70px;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  padding-left: 10px;
+}
+body .main #search.open {
+  border: 3px solid grey;
+}
+body .main ::placeholder {
+  color: #5e5757;
+  font-family: "Poppins", sans-serif, monospace;
+  padding-left: 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+body .main .enter {
+  color: white;
+  position: absolute;
+  top: 94px;
+  left: 2%;
+  font-size: 13px;
+}
+body .main .enter span {
+  font-weight: bolder;
+}
+body .main .temp {
+  position: absolute;
+  right: 50px;
+  top: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 180px;
+}
+body .main .temp .place {
+  font-size: 65px;
+  font-weight: 500;
+}
+body .main .temp .weatherDisc {
+  font-size: 31px;
+  font-weight: 300;
+}
+body .main .temp .tempMain {
+  font-size: 60px;
+  font-weight: 500;
+}
+body .main .morebutton {
+  color: white;
+  position: absolute;
+  right: 30px;
+  top: 35vh;
+  text-decoration: underline;
+  cursor: pointer;
+}
+body .main .moreInfo {
+  color: white;
+  position: absolute;
+  right: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  top: 40vh;
+  height: 150px;
+  opacity: 0;
+  transition: all 0.4s ease-in;
+  pointer-events: none;
+}
+body .main .moreInfoOpen {
+  opacity: 1;
+  transition: all 0.4s ease-in;
+  pointer-events: all;
+}
+body .day {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/day.png");
+  background-size: cover;
+  width: 100vw;
+  height: 100.5vh;
+}
+body .night {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("../assets/night.jpg");
+  background-size: cover;
+  width: 100vw;
+  height: 100.5vh;
+}
+
+@media (max-width: 415px) {
+  body .main {
+    background-position: 80vh;
+  }
+  body .main .morebutton {
+    position: absolute;
+    top: 55vh;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    left: 0;
+  }
+  body .main #search {
+    position: absolute;
+    left: 50%;
+  }
+  body .main .enter {
+    display: none;
+  }
+  body .main .timeDate {
+    position: absolute;
+    bottom: 10px;
+    left: 1rem;
+  }
+  body .main .timeDate .time {
+    font-size: 20px;
+  }
+  body .main .timeDate .date {
+    font-size: 20px;
+  }
+  body .main .timeDate .localtime {
+    font-size: 40px;
+    font-weight: bolder;
+  }
+  body .main .temp {
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    right: 50%;
+    top: 35%;
+    transform: translate(50%, -50%);
+    height: 30vh;
+  }
+  body .main .temp .place {
+    font-size: 30px;
+  }
+  body .main .moreInfo {
+    right: 50%;
+    top: 70%;
+    transform: translate(50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
